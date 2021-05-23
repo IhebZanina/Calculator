@@ -1,0 +1,138 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #8080ff;
+  background: -webkit-linear-gradient(to right, #000000, #ffffff);
+  background: linear-gradient(to right, #000000, #ffffff);
+  max-height: 100vh;
+  background-image: url("./Images/back.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.zero {
+  position: fixed;
+  font-family: "Pacifico", cursive;
+  color: #000000;
+  margin-top: 30%;
+  margin-left: 2%;
+  text-align: center;
+  font-size: 1.5vw;
+}
+#calculator {
+  width: 25rem;
+  height: 42rem;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  backdrop-filter: blur(9px);
+  margin: 0 auto;
+  top: 10px;
+  position: relative;
+  border-radius: 6px;
+  place-items: center;
+  box-shadow: 1em 0 10em rgb(0, 0, 0), -1em 0 10em rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+#calculator button:hover {
+  transition: 0s;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#result {
+  height: 20%;
+  font-weight: bold;
+  font-variant-numeric: slashed-zero;
+}
+#history {
+  text-align: right;
+  height: 30%;
+  margin: 0 20 auto;
+  padding-top: 0.3rem;
+  padding-right: 0.6rem;
+  font-size: 1vw;
+  font-family: "Lobster Two", cursive;
+  color: #7c7c7c;
+}
+#output {
+  padding-bottom: 10px;
+  padding-right: 20px;
+  font-family: "Pattaya";
+  text-align: right;
+  height: 50%;
+  margin: 10px 20px auto;
+  background-color: rgb(173, 228, 250);
+  font-variant-numeric: slashed-zero;
+  font-size: 2vw;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 5px #ffffff;
+
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#keyboard {
+  margin-top: 10px;
+
+  height: 77%;
+}
+
+.operator,
+.number,
+.empty {
+  width: 19%;
+  height: 16%;
+  margin: 3%;
+  float: left;
+  border-radius: 50%;
+  border-width: 0;
+  font-size: 2vw;
+}
+.operator {
+  font-weight: bold;
+  background-color: #aaa9a9;
+}
+
+.empty {
+  background: transparent;
+}
+
+.number,
+.operator {
+  font-family: "Mountains of Christmas", cursive;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px #8d8b8b8c, -5px -5px 10px #6d6b6b;
+}
+
+button:nth-child(4) {
+  background-color: #20b2aa;
+}
+button:nth-child(8) {
+  background-color: #ffa500;
+}
+button:nth-child(12) {
+  background-color: #f08080;
+}
+button:nth-child(16) {
+  background-color: #7d93e0;
+}
+button:nth-child(20) {
+  background-color: #9477af;
+}
+
+.operator:active,
+.number:active {
+  animation: growUp 0.06s;
+}
+@keyframes growUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.operator:focus,
+.number:focus,
+.empty:focus {
+  outline: 0;
+}
