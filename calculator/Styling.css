@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #8080ff;
@@ -5,23 +10,24 @@ body {
   background: linear-gradient(to right, #000000, #ffffff);
   max-height: 100vh;
   background-image: url("./Images/back.jpeg");
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
 .zero {
-  position: fixed;
+  position: absolute;
   font-family: "Pacifico", cursive;
   color: #000000;
-  margin-top: 30%;
-  margin-left: 2%;
+  margin: 25% 0 0 2%;
   text-align: center;
   font-size: 1.5vw;
+  user-select: none;
 }
 #calculator {
-  width: 25rem;
-  height: 42rem;
+  width: min(70%, 450px); /*25rem */
+  height: 85%; /*42rem*/
   background: rgba(255, 255, 255, 0.05);
   overflow: hidden;
   backdrop-filter: blur(9px);
@@ -34,9 +40,14 @@ body {
   transition: 0.5s;
 }
 
-#calculator button:hover {
+#calculator .operator:hover {
   transition: 0s;
   background: rgba(255, 255, 255, 0.05);
+}
+
+#calculator .number:hover {
+  transition: 0s;
+  background: rgba(124, 231, 245, 0.288);
 }
 
 #result {
@@ -80,12 +91,12 @@ body {
 .number,
 .empty {
   width: 19%;
-  height: 16%;
+  height: 15%;
   margin: 3%;
   float: left;
   border-radius: 50%;
   border-width: 0;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 .operator {
   font-weight: bold;
@@ -135,4 +146,100 @@ button:nth-child(20) {
 .number:focus,
 .empty:focus {
   outline: 0;
+}
+
+.footer {
+  position: fixed;
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #a8a8a86b;
+  backdrop-filter: blur(12px);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-family: "ZCOOL KuaiLe", cursive;
+}
+
+.Designer {
+  padding-top: 10px;
+}
+
+.footer a {
+  color: #000000;
+  text-decoration: none;
+  cursor: help;
+}
+
+.footer a:hover {
+  color: #ffffff;
+
+  transition: 0.6s;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact a {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: #ffffff;
+  color: #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 1em;
+  border-radius: 15%;
+  transition: all 0.4s;
+  cursor: grab;
+}
+.contact a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #c32aa3;
+  border-radius: 15%;
+  transform: scale(1.1);
+  z-index: -1;
+  transition: all 0.4s;
+}
+.contact a:nth-child(2)::before {
+  background: #4267b2;
+}
+
+.contact a:nth-child(3)::before {
+  background: #817f7f;
+}
+
+.contact a:nth-child(4)::before {
+  background: #0072b1;
+}
+.contact a:hover::before {
+  transform: translateY(10px) scaleX(0.6) scaleY(0.8);
+  filter: blur(10px);
+}
+.contact a:hover:nth-child(1) {
+  color: #c32aa3;
+  text-shadow: 0 0 30px #c32aa3;
+}
+
+.contact a:hover:nth-child(2) {
+  color: #4267b2;
+  text-shadow: 0 0 30px #4267b2;
+}
+
+.contact a:hover:nth-child(3) {
+  color: #817f7f;
+  text-shadow: 0 0 30px #817f7f;
+}
+.contact a:hover:nth-child(4) {
+  color: #0072b1;
+  text-shadow: 0 0 30px #0072b1;
 }
