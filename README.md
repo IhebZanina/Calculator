@@ -3,11 +3,19 @@ This project will be my first step to be a Front_End Developer while im learning
 ### PROJECT TYPE: EASY
 
 
-## Video
+## First version 
 https://user-images.githubusercontent.com/74963446/119273480-0c2afe00-bc03-11eb-98f1-a339bb8de879.mp4
 
-## ScreenShot
+## Second Version
+https://user-images.githubusercontent.com/74963446/119733606-b019e100-be71-11eb-8981-15d3ed4444b1.mp4
+
+
+## ScreenShot First version
 ![Calculator WEB APP](https://user-images.githubusercontent.com/74963446/119271165-49d65980-bbf8-11eb-96fe-86aefbcdf342.png)
+
+## ScreenShot Second Version
+![Untitled](https://user-images.githubusercontent.com/74963446/119733995-346c6400-be72-11eb-8d80-cc0975cc090b.png)
+
 
 ## Built With
 * [Bootstrap](https://getbootstrap.com)
